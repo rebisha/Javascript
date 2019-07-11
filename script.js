@@ -26,3 +26,15 @@ job = 'Developer';
 alert(age + ' ' + job);
 lastName = prompt('last name?');
 console.log(lastName);
+
+//Mark and John BMI JavaScript
+var markMass = prompt("Mark, please enter your body mass.");
+var markHeight = prompt("Mark, please enter your height.");
+var markBmi = markMass / (markHeight ^ 2);
+
+var johnMass = prompt("John, please enter your body mass.");
+var johnHeight = prompt("John, please enter your height.");
+var johnBmi = johnMass / (johnHeight ^ 2);
+
+var isMarkHigherBmi = markBmi > johnBmi;
+console.log(isMarkHigherBmi);
