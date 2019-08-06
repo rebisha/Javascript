@@ -1,4 +1,4 @@
-// Variables and data types
+/* // Variables and data types
 var firstName = "Rebisha";
 console.log(firstName);
 
@@ -37,4 +37,29 @@ var johnHeight = prompt("John, please enter your height.");
 var johnBmi = johnMass / (johnHeight ^ 2);
 
 var isMarkHigherBmi = markBmi > johnBmi;
-console.log(isMarkHigherBmi);
+console.log(isMarkHigherBmi); */
+
+
+function calcAverage(num1, num2, num3) {
+    return (num1 + num2 + num3)/3;
+}
+
+var johnTeamAvg, mikeTeamAvg;
+
+johnTeamAvg = calcAverage(89,120,103);
+mikeTeamAvg = calcAverage(116,94,123);
+maryTeamAvg = calcAverage(97,134,105);
+
+console.log(`Average of John's team : `+ johnTeamAvg);
+console.log(`Average of Mike's team : `+ mikeTeamAvg);
+console.log(`Average of Mary's team : `+ maryTeamAvg);
+
+if(johnTeamAvg > mikeTeamAvg && johnTeamAvg > maryTeamAvg) {
+    console.log(`John's team are the winner.`);
+} else if(johnTeamAvg === mikeTeamAvg && johnTeamAvg === maryTeamAvg) {
+    console.log('The game was draw.');
+} else if(maryTeamAvg > johnTeamAvg && maryTeamAvg > mikeTeamAvg) {
+    console.log(`Mary's team are the winner`);
+} else {
+    console.log(`Mike's team are the winner.`);
+}
