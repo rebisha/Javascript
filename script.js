@@ -40,7 +40,7 @@ function calcAverage(num1, num2, num3) {
     return (num1 + num2 + num3)/3;
 }
 
-var johnTeamAvg, mikeTeamAvg;
+var johnTeamAvg, mikeTeamAvg, maryTeamAvg;
 
 johnTeamAvg = calcAverage(89,120,103);
 mikeTeamAvg = calcAverage(116,94,123);
@@ -60,7 +60,7 @@ if(johnTeamAvg > mikeTeamAvg && johnTeamAvg > maryTeamAvg) {
     console.log(`Mike's team are the winner.`);
 }
 
-var bills = [124, 48, 268];
+/* var bills = [124, 48, 268];
 var tips = [];
 
 function tipCalculator(bills) {
@@ -75,7 +75,7 @@ function tipCalculator(bills) {
     });  
 }
 tipCalculator(bills);
-console.log(tips);
+console.log(tips); */
 
 var johnObj = {
     name : 'John Smith',
@@ -101,3 +101,37 @@ if(johnObj.bmi > markObj.bmi) {
     console.log('Mark has higher BMI of ' + markObj.bmi);
 }
 
+// coding challenge 5
+var bill = [124, 48, 268, 180, 42];
+var tip = [];
+var finalBill = [];
+
+for(var i = 0; i < bill.length; i++) {
+    var bills = bill[i];
+
+    if(bills < 50) {
+        tip[i]= bills * 0.2;
+        finalBill[i] = bills - tip[i];
+    } else if(bills > 200) {
+        tip[i] = bills * 0.1;
+        finalBill[i] = bills - tip[i];
+    } else {
+        tip[i] = bills * 0.15;
+        finalBill[i] = bills - tip[i];
+    }
+}
+console.log("Tips: ", tip);
+console.log("Final bill: ", finalBill);
+
+var markBill = [77, 375, 110, 45];
+
+function markAvgBill(bill) {
+    var sum=0;
+    for(var i=0; i < markBill.length; i++) {        
+        sum = sum + markBill[i];
+        bill = sum/markBill.length;
+    }
+    return bill;
+}
+
+console.log("Mark average bill: ", markAvgBill(markBill));
