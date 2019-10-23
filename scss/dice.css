@@ -6,7 +6,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 .clearfix::after {
@@ -80,7 +79,6 @@ body {
     color: #EB4D4D;
     top: -7px;
     right: 10px;
-    
 }
 
 .player-current-box {
@@ -121,6 +119,7 @@ button {
 
 button:hover { font-weight: 600; }
 button:hover i { margin-right: 20px; }
+button:disabled { color: #a9a9a9; }
 
 button:focus {
     outline: none;
