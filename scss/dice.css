@@ -69,8 +69,13 @@ body {
     margin-bottom: 130px;
 }
 
-.active { background-color: #f7f7f7; }
-.active .player-name { font-weight: 300; }
+.active {
+    background-color: #f7f7f7;
+}
+
+.active .player-name {
+    font-weight: 300;
+}
 
 .active .player-name::after {
     content: "\2022";
@@ -117,9 +122,17 @@ button {
     transition: background-color 0.3s, color 0.3s;
 }
 
-button:hover { font-weight: 600; }
-button:hover i { margin-right: 20px; }
-button:disabled { color: #a9a9a9; }
+button:hover {
+    font-weight: 600;
+}
+
+button:hover i {
+    margin-right: 20px;
+}
+
+button:disabled {
+    color: #a9a9a9;
+}
 
 button:focus {
     outline: none;
@@ -136,9 +149,17 @@ i {
     transition: margin 0.3s;
 }
 
-.btn-new { top: 45px;}
-.btn-roll { top: 403px;}
-.btn-hold { top: 467px;}
+.btn-new {
+    top: 45px;
+}
+
+.btn-roll {
+    top: 403px;
+}
+
+.btn-hold {
+    top: 467px;
+}
 
 .dice {
     display: none;
@@ -150,5 +171,88 @@ i {
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
-.winner { background-color: #f7f7f7; }
-.winner .player-name { font-weight: 300; color: #EB4D4D; }
+.winner {
+    background-color: #f7f7f7;
+}
+
+.winner .player-name {
+    font-weight: 300;
+    color: #EB4D4D;
+}
+
+/*Mobile Screen*/
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        width: auto;
+        flex-direction: column;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        height: 100vh;
+        overflow: auto;
+    }
+
+    .player-0-panel,
+    .player-1-panel {
+        width: 100%;
+        height: auto;
+        padding: 20px 50px;
+        margin-bottom: 225px;
+    }
+
+    .player-1-panel {
+        margin-bottom: 0;
+    }
+
+    .active .player-name::after {
+        right: auto;
+    }
+
+    .player-score {
+        margin-bottom: 30px;
+    }
+
+    .player-current-box {
+        width: 80%;
+    }
+
+    button {
+        background-color: white;
+        z-index: 99999;
+        width: 190px;
+        padding: 10px;
+        border: 2px solid #EB4D4D;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+
+    i {
+        margin-right: 5px;
+    }
+
+    .btn-new {
+        top: 50%;
+        left: 25%;
+        margin: 15px 0;
+    }
+
+    .btn-roll {
+        top: 60%;
+        left: 25%;
+        margin: 15px 0;
+    }
+
+    .btn-hold {
+        top: 70%;
+        left: 25%;
+        margin: 15px 0;
+    }
+
+    .dice {
+        top: 55%;
+        left: 70%;
+        height: 150px;
+    }
+}
